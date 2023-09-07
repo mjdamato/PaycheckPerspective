@@ -1,0 +1,1 @@
+//function to retrieve average pay
