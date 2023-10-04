@@ -12,7 +12,7 @@ function IndexPopup() {
         flexWrap: "wrap",
         flexGrow: 1,
         padding: 16,
-        backgroundColor: #009933"
+        backgroundColor: "#009933"
       }}>
       
       <h2>
@@ -22,14 +22,15 @@ function IndexPopup() {
       <h3> 
       	Job Title:
       </h3>
+      
       <h3> 
       	Average Salary:
       </h3>
       
       	
       <input onChange={(e) => setData(e.target.value)} value={data} />
-      <a href="https://docs.plasmo.com" target="_blank">
-        View Docs
+      <a href="https://github.com/mjdamato/PaycheckPerspective" target="_blank">
+        About our project!
       </a>
     </div>
   )
