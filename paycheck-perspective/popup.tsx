@@ -10,29 +10,25 @@ function IndexPopup() {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
-        flexGrow: 1,
+        flexGrow: 2,
         padding: 16,
-        backgroundColor: "#009933"
+        backgroundColor: "#a7d9b8"
       }}>
       
-      <h2>
+      <h1>
         PaycheckPerspective
-      </h2>
-      <p> Here to aid you in your job searching needs </p>
-      <h3> 
-      	Job Title:
-      </h3>
-      
+      </h1>
+      <p><i> Here to aid you in your job searching needs </i></p>
       <h3> 
       	Average Salary:
       </h3>
       
       	
-      <input onChange={(e) => setData(e.target.value)} value={data} />
       <a href="https://github.com/mjdamato/PaycheckPerspective" target="_blank">
-        About our project!
+        Learn more about our project!
       </a>
-    </div>
+      
+    </div> 
   )
 }
 
