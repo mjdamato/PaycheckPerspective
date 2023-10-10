@@ -1,8 +1,8 @@
 import type { PlasmoCSConfig } from "plasmo"
 
 export const config: PlasmoCSConfig = {
-	matches: ["<all_urls>"],
-  //matches: ["https://www.indeed.com/*"],
+	//matches: ["<all_urls>"],
+  matches: ["https://www.indeed.com/*"],
   world: "MAIN"
 }
 
