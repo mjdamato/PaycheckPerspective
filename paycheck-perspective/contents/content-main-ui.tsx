@@ -10,11 +10,14 @@ export default function PlasmoMainUI() {
   return (
     <div
       style={{
-        padding: 8,
+        padding: 4,
         background: "purple",
-        color: "white"
+        color: "white",
       }}>
-      <h1>{`Message: ${window.mainMessage}`}</h1>
+      <h4>{`Message: ${window.mainMessage}`}</h4>
+      <img src="/paycheck-perspective/assets/icon.png" height="2"/>
+      <h4>{`Message: ${window.mainNum}`}</h4>
+
     </div>
   )
 }

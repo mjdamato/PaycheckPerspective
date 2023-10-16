@@ -8,3 +8,4 @@ export const config: PlasmoCSConfig = {
 }
 
 window.mainMessage  = "Indeed has been reached"
+window.mainNum = 144

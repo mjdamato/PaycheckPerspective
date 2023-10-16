@@ -5,4 +5,6 @@ interface Window {
   }
 
   mainMessage: string
+  mainNum: int
+  logoPath: string
 }
