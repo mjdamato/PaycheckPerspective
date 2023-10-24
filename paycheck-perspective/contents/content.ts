@@ -1,4 +1,5 @@
 import type { PlasmoCSConfig } from "plasmo"
+
  
 export const config: PlasmoCSConfig = {
   //matches: ["<all_urls>"],
@@ -8,4 +9,3 @@ export const config: PlasmoCSConfig = {
 }
 
 window.mainMessage  = "Indeed has been reached"
-window.mainNum = 144

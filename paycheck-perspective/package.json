@@ -32,8 +32,6 @@
     "host_permissions": [
       "https://*/*"
     ],
-    "permissions": [
-      "tabs"
-    ]
+    "permissions": ["scripting", "activeTab", "tabs"]
   }
 }
