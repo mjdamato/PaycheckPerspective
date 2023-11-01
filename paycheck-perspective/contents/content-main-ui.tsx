@@ -15,9 +15,10 @@ export default function PlasmoMainUI() {
         color: "white",
       }}>
       <h4>{`${window.mainMessage}`}</h4>
-      <input size={50} type="text" id={window.id} placeholder="Would you like to save this job posting?" />
+      <button> Would you like to save this job? </button>
+      <h4>{`${window.value}`}</h4>
 
-
+      
     </div>
   )
 }

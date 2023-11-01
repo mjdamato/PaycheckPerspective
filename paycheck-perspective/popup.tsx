@@ -21,6 +21,9 @@ function IndexPopup() {
          <script defer src="/reading.ts"></script>
       <p><i> Here to aid you in your job searching needs </i></p>
       
+      <a href="https://github.com/mjdamato/PaycheckPerspective" target="_blank">
+        See your saved jobs :^)
+      </a>
       	
       <a href="https://github.com/mjdamato/PaycheckPerspective" target="_blank">
         Learn more about our project!

@@ -8,4 +8,5 @@ export const config: PlasmoCSConfig = {
   run_at: "document_start"
 }
 
-window.mainMessage  = "Indeed has been reached"
+//window.mainMessage  = "Indeed has been reached"
+window.value = location.href
