@@ -20,10 +20,6 @@ function IndexPopup() {
       </h1>
          <script defer src="/reading.ts"></script>
       <p><i> Here to aid you in your job searching needs </i></p>
-   
-      <h3> 
-      	Average Salary:
-      </h3>
       
       	
       <a href="https://github.com/mjdamato/PaycheckPerspective" target="_blank">

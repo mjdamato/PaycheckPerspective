@@ -8,7 +8,8 @@ export const config: PlasmoCSConfig = {
   run_at: "document_start"
 }
 
+/*
 function rah (ran: TextFieldProps){
 	ran.label = "ah";
-	console.log(ran.label);
-}
+}*/
+window.label = "ah"

@@ -14,9 +14,9 @@ export default function PlasmoMainUI() {
         background: "purple",
         color: "white",
       }}>
-      <h4>{`Message: ${window.mainMessage}`}</h4>
-      <img src="/paycheck-perspective/assets/icon.png" height="2"/>
-      <h4>{`Message: ${window.mainNum}`}</h4>
+      <h4>{`${window.mainMessage}`}</h4>
+      <input size={50} type="text" id={window.id} placeholder="Would you like to save this job posting?" />
+
 
     </div>
   )
