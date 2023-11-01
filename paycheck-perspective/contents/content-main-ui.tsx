@@ -14,8 +14,12 @@ export default function PlasmoMainUI() {
         background: "purple",
         color: "white",
       }}>
+
       <h4>{`${window.mainMessage}`}</h4>
+      
       <button> Would you like to save this job? </button>
+
+
       <h4>{`${window.value}`}</h4>
 
       
