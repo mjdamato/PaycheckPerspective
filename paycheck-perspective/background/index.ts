@@ -1,3 +1,4 @@
+/*
 import mysql from "mysql2";
 import dbConfig from "../background/db.config";
 
@@ -7,3 +8,4 @@ export default mysql.createConnection({
   password: dbConfig.PASSWORD,
   database: dbConfig.DB
 });
+*/

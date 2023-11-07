@@ -1,3 +1,4 @@
+/*
 import connection from "../db";
 import Tutorial from "../earnings.model";
 
@@ -116,3 +117,4 @@ deleteAll(): Promise<number> {
     });
   });
 }
+*/

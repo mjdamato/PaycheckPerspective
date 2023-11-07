@@ -16,4 +16,9 @@ interface Window {
   isRequired: boolean;
   placeholder: string;
   error: string;
+//}
+
+//interface buttonProps {
+  bmessage: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }

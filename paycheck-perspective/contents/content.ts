@@ -9,4 +9,6 @@ export const config: PlasmoCSConfig = {
 }
 
 //window.mainMessage  = "Indeed has been reached"
+window.bmessage = "Would you like to save this job?"
 window.value = location.href
+window.onClick = alert('hello')

@@ -17,7 +17,9 @@ export default function PlasmoMainUI() {
 
       <h4>{`${window.mainMessage}`}</h4>
       
-      <button> Would you like to save this job? </button>
+      <button onClick={window.onClick}>
+         {window.bmessage}
+       </button>
 
 
       <h4>{`${window.value}`}</h4>

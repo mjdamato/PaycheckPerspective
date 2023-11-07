@@ -1,3 +1,4 @@
+/*
 import {RowDataPacket} from "mysql2"
 
 export default interface new_schema extends RowDataPacket {
@@ -8,3 +9,4 @@ export default interface new_schema extends RowDataPacket {
   Percentage_of_women_in_occupational_group?: number;
   Median_earnings?: number;
 }
+*/
