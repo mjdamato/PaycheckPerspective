@@ -20,5 +20,7 @@ interface Window {
 
 //interface buttonProps {
   bmessage: string;
+  func: Function;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  //onClick: () => void;
 }
