@@ -4,7 +4,7 @@ function IndexPopup() {
   const [data, setData] = useState("")
 
   return (
-    <div>
+    <div
     
       style={{
         display: "flex",
@@ -20,7 +20,7 @@ function IndexPopup() {
       </h1>
          <script defer src="/reading.ts"></script>
       <p><i> Here to aid you in your job searching needs. </i></p>
-      <br><br>
+      <br />
       
       <a href="/PaycheckPerspective/index.html">
         See your saved jobs :^)
