@@ -4,9 +4,7 @@ import React from "react";
 
 export const config: PlasmoCSConfig = {
 	//matches: ["<all_urls>"],
-  matches: ["https://www.indeed.com/*"],
-    //matches: ["https://app.joinhandshake.com/*"],
-
+  matches: ["https://app.joinhandshake.com/*"],
 
   world: "MAIN"
 }
