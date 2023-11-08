@@ -15,5 +15,5 @@ window.mainMessage  = "Job Searching? :')"
 //window.bmessage = "Would you like to save this job?"
 window.saveM =  "Save this job for later?"
 window.applyM = "Applied for this job?   "
-window.shareM = "Share experience with this company?"
+window.shareM = "Share your experience with this company?"
 window.value = "The current URL: " + location.href
