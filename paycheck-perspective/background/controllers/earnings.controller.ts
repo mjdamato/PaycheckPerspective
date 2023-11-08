@@ -11,7 +11,7 @@ export default class EarningsController {
 
     async findOne(req: Request, res: Response) {
     }
-
+/*
     async update(req: Request, res: Response) {
     }
 
@@ -23,5 +23,5 @@ export default class EarningsController {
 
     async findAllPublished(req: Request, res: Response) {
     } 
-
+*/
 }

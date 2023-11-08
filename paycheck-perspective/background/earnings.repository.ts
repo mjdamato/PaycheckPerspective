@@ -1,12 +1,12 @@
-/*
+
 import connection from "../db";
 import Earnings from "../earnings.model";
 
 interface IEarningsRepository {
   save(earnings: Earnings): Promise<Earnings>;
   retrieveAll(searchParams: {occupation: string, median_earnings: number}): Promise<Earnings[]>;
-  retrieveById(earningsoccupation: string): Promise<Earnings | undefined>;
-  update(earnings: new): Promise<number>;
+  retrieveById(occupation: string): Promise<Earnings | undefined>;
+  update(earnings: Earnings): Promise<number>;
   delete(occupation: string): Promise<number>;
   deleteAll(): Promise<number>;
 }
@@ -24,13 +24,15 @@ class EarningsRepository implements IEarningsRepository { }
   deleteAll(): Promise<number> { }
 }
 
+export default new EarningsRepository();
+
 
 import { OkPacket } from "mysql2";
 
 save(earnings: Earnings): Promise<Earnings> {
   return new Promise((resolve, reject) => {
     connection.query<OkPacket>(
-      "INSERT INTO earnings (occupation, Number_of_full_time_workers, Number_of_men, Number_of_women, Percentage_of_women_in_occupational_group, Median_earnings) VALUES(?,?,?)",
+      "INSERT INTO earnings (Occupation, Number_of_full_time_workers, Number_of_men, Number_of_women, Percentage_of_women_in_occupational_group, Median_earnings) VALUES(?,?,?)",
       //[earnings.occupation, earnings.Median_earnings, earnings.published ? earnings.published : false],
       (err, res) => {
         if (err) reject(err);
@@ -47,11 +49,11 @@ retrieveAll(searchParams: {occupation?: string, median_earnings?: number}): Prom
     let query: string = "SELECT * FROM earnings";
     let condition: string = "";
   
-    if (searchParams?.published)
-      condition += "published = TRUE"
+    if (searchParams?.occupation)
+      condition += 'LOWER(occupation) LIKE '%${searchParams.occupation}%''
   
-    if (searchParams?.title)
-      condition += `LOWER(title) LIKE '%${searchParams.title}%'`
+    if (searchParams?.median_earnings)
+      condition += `(median_earnings) LIKE '%${searchParams.median-earnings}%'`
   
     if (condition.length)
       query += " WHERE " + condition;
@@ -68,7 +70,7 @@ retrieveAll(searchParams: {occupation?: string, median_earnings?: number}): Prom
     return new Promise((resolve, reject) => {
       connection.query<Earnings[]>(
         "SELECT * FROM earnings WHERE occupation = ?",
-        [earningsOccupation],
+        [occupation],
         (err, res) => {
           if (err) reject(err);
           else resolve(res?.[0]);
@@ -77,13 +79,13 @@ retrieveAll(searchParams: {occupation?: string, median_earnings?: number}): Prom
     });
   }
 
-import { OkPacket } from "mysql2";
+/*import { OkPacket } from "mysql2";
 
 update(earnings: Earnings): Promise<number> {
   return new Promise((resolve, reject) => {
     connection.query<OkPacket>(
-      "UPDATE earnings SET median_earnings = ?, occupation = ?",
-      [earnings.occupation, earnings.Median_earnings, earnings.published,],
+      "UPDATE earnings SET occupation = ?, median_earnings = ?",
+      [earnings.Occupation, earnings.Median_earnings, earnings. , earnings. , earnings. ],
       (err, res) => {
         if (err) reject(err);
         else resolve(res.affectedRows);
