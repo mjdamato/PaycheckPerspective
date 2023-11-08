@@ -4,7 +4,7 @@ function IndexPopup() {
   const [data, setData] = useState("")
 
   return (
-    <div
+    <div>
       style={{
         display: "flex",
         flexDirection: "column",
