@@ -4,7 +4,7 @@ import React from "react";
 
 export const config: PlasmoCSConfig = {
 	//matches: ["<all_urls>"],
-  matches: ["https://www.indeed.com/*", "https://www.linkedin.com/jobs"],
+  matches: ["https://www.indeed.com/*"],
 
   world: "MAIN"
 }
@@ -59,7 +59,7 @@ function setURL(){
 	*/
 	
 //calls the next function
-	applicationStatus()
+	//applicationStatus()
 }
 function getURL(){
 	const newURL= window.value;
@@ -68,7 +68,7 @@ function getURL(){
 function appliedRah(){
 	alert('Good luck :), this posting has been saved');
 }
-
+/*
 function applicationStatus(){
 	const applicationCon = confirm("Did you apply?"); 
 	if (applicationCon == true){
@@ -79,3 +79,4 @@ function applicationStatus(){
 function gooLuck(){
 	alert('Good luck on your job searching journey :)');
 }
+*/
