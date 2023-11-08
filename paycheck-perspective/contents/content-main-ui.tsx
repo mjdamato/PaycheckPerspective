@@ -4,7 +4,8 @@ import React from "react";
 
 export const config: PlasmoCSConfig = {
 	//matches: ["<all_urls>"],
-  matches: ["https://www.indeed.com/*"],
+  matches: ["https://www.indeed.com/*", "https://www.linkedin.com/jobs"],
+
   world: "MAIN"
 }
 
@@ -19,10 +20,11 @@ export default function PlasmoMainUI() {
         color: "white",
         marginTop: 160,
         marginLeft: 5
+       // textAlign: center
       }}>
       
 
-      <h4>{`${window.mainMessage}`}</h4>
+      <h4 text-align="center">{`${window.mainMessage}`}</h4>
       
       <button type="button" id="URLbutton" onClick={setURL}>
          {window.saveM}
@@ -32,7 +34,7 @@ export default function PlasmoMainUI() {
          {window.applyM}
        </button>
        <p />
-       <a href="https://www.glassdoor.com/Reviews/index.htm" target="_blank" color="white">
+       <a href="https://www.glassdoor.com/Reviews/index.htm" target="_blank">
        {window.shareM}
       </a>
        <p />
