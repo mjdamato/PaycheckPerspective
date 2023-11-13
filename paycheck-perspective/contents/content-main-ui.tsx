@@ -47,7 +47,8 @@ export default function PlasmoMainUI() {
 }
 function setURL(){
 	window.value = location.href;
-	alert("This job posting has been saved");
+	//alert("This job posting has been saved");
+	alert("The job posting: "+ window.value +" has been saved!");
 	
 	/*
 	// 1. Select the div element using the id property

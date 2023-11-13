@@ -1,7 +1,7 @@
 {
   "name": "paycheck-perspective",
   "displayName": "Paycheck perspective",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Extension to show average pay of a position within a job posting",
   "author": "Mia Damato, Taylor Cassidy, Gabriel QC",
   "scripts": {
@@ -11,7 +11,7 @@
     "start": "tsc && node dist/index.js"
   },
   "dependencies": {
-    "plasmo": "0.83.0",
+    "plasmo": "^0.84.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^6.1.0"

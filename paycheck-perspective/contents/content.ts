@@ -13,7 +13,7 @@ export const config: PlasmoCSConfig = {
   run_at: "document_start"
 }
 
-window.mainMessage  = "Job Searching? :')"
+window.mainMessage  = "Job Searching at Indeed? :')"
 //window.bmessage = "Would you like to save this job?"
 window.saveM =  "Save this job for later?"
 window.applyM = "Applied for this job?   "
