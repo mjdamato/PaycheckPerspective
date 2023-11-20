@@ -8,13 +8,14 @@
     "dev": "plasmo dev",
     "build": "plasmo build",
     "test": "plasmo test",
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/index.js && node app.js"
   },
   "dependencies": {
     "plasmo": "^0.84.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "mysql": "latest"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.1.0",

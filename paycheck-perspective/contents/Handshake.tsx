@@ -16,7 +16,6 @@ export default function PlasmoMainUI() {
       style={{
         padding: 15,
         position: "fixed",
-
         borderRadius: 25,
         background: "#3221de",
         color: "white",

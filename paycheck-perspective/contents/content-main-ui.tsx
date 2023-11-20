@@ -50,6 +50,7 @@ function setURL(){
 	window.value = location.href;
 	//alert("This job posting has been saved");
 	alert("The job posting: "+ window.value +" has been saved!");
+	window.savedN ++;
 	
 	/*
 	// 1. Select the div element using the id property

@@ -22,6 +22,7 @@ interface Window {
   saveM: string;
   applyM: string;
   shareM: string;
+  savedN: int;
   func: Function;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   //onClick: () => void;
