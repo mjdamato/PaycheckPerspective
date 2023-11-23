@@ -25,9 +25,7 @@ function IndexPopup() {
       <a href="hi.html">
         See your saved jobs :^)
       </a>
-      
-      <p>Number of saved jobs: {window.savedN} </p>
-      
+            
       <a href="https://github.com/mjdamato/PaycheckPerspective" target="_blank">
         Learn more about our project!
       </a>
