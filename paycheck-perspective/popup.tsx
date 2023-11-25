@@ -22,7 +22,8 @@ function IndexPopup() {
       <p><i> Here to aid you in your job searching needs. </i></p>
       <br />
       
-      <a href="hi.html">
+      <a href="chrome-extension://dbmpooojfpdodeobggclohbllekgeaod/tabs/landingpage.html"
+      target="_blank">
         See your saved jobs :^)
       </a>
             
