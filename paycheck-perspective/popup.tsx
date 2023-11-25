@@ -18,7 +18,6 @@ function IndexPopup() {
       <h1>
        PaycheckPerspective
       </h1>
-         <script defer src="/reading.ts"></script>
       <p><i> Here to aid you in your job searching needs. </i></p>
       <br />
       
