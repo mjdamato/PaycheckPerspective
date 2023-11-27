@@ -13,8 +13,14 @@ export default class JobsRah {
    }
 */  
    
-   addToJobs(job: string){
+	addToJobs(job: string){
 	//this.savedJobs 
-	this.jobLinks.push(job);
+		this.jobLinks.push(job);
+	}
+	
+	removeFromJobs(job: string){
+		//the splice is supposed to remove a specified index
+		//the index of is getting that numerical value
+		this.jobLinks.splice(this.jobLinks.indexOf(job));
 	}
 }
