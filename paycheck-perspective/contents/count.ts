@@ -9,7 +9,6 @@ export default class counterRah {
   
    
    setCount(){
-	//this.savedJobs 
 	return this.savedJobs;
 }
 }
