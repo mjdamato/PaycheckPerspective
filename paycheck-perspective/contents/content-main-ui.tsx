@@ -5,11 +5,7 @@ import savingAndGetting from "./savingAndGetting";
 
 
 export const config: PlasmoCSConfig = {
-	//matches: ["<all_urls>"],
   matches: ["https://www.indeed.com/*"],
-    //matches: ["https://app.joinhandshake.com/*"],
-
-
   world: "MAIN"
 }
 
@@ -21,11 +17,10 @@ export default function PlasmoMainUI() {
         padding: 15,
         position: "fixed",
         borderRadius: 25,
-        background: "#3221de",
-        color: "white",
+        backgroundColor: 'black',
+        color: '#03fcec',
         marginTop: 160,
         marginLeft: 5
-       // textAlign: center
       }}>
       
 
@@ -58,15 +53,3 @@ function getURL(){
 function appliedRah(){
 	alert('Good luck :), this posting has been saved');
 }
-/*
-function applicationStatus(){
-	const applicationCon = confirm("Did you apply?"); 
-	if (applicationCon == true){
-		alert("rah");
-	}
-	gooLuck();
-}
-function gooLuck(){
-	alert('Good luck on your job searching journey :)');
-}
-*/

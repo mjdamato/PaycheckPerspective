@@ -23,7 +23,7 @@ function IndexPopup() {
       
       <a href="chrome-extension://dbmpooojfpdodeobggclohbllekgeaod/tabs/landingpage.html"
       target="_blank">
-        See your saved jobs :^)
+        To the landing page :^)
       </a>
             
       <a href="https://github.com/mjdamato/PaycheckPerspective" target="_blank">

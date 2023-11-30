@@ -1,13 +1,18 @@
 import React from "react";
 //import * as fs from 'fs';
 import { readFileSync } from 'fs';
+import { join } from 'path';
+import {writeFileSync} from 'fs';
+import {appendFileSync} from 'fs';
+import { promises } from "fs";
+
 
 
 export default class JobsRah {
 	//savedJobs:number;
 	//jobLinks:string;
 	//hardcoded testing
-	jobLinks: string[] = ["ah", "plese", "help"];
+	jobLinks: string[] = [];
 
 /*
 	constructor(job: string) {
@@ -18,6 +23,23 @@ export default class JobsRah {
 	addToJobs(job: string){
 		this.jobLinks.push(job);
 	}
+	
+	
+	//next function will eventually replace the function above
+	/*
+	addToJobs(job: string){
+		writeFileSync(join(__dirname, '../background/UareLs.txt'), job, {
+    flag: 'w',
+  });
+
+  const contents = readFileSync(join(__dirname, '../background/UareLs.txt'), 'utf-8');
+  //console.log(contents); // 👉️ "One Two Three Four"
+  alert(contents + "rah?");
+
+  //return contents;
+}
+	//}
+	*/
 	
 	removeFromJobs(job: string){
 		//the splice is supposed to remove a specified index
@@ -35,15 +57,11 @@ export default class JobsRah {
   // Code to execute with 'element' in each iteration
 }
 		return element;
-		 //const greetingValue = localStorage.getItem('greeting');
-		 //return greetingValue; 
 	}
 	
 	getDaTextFileJobs(){
-		var words:string = readFileSync('../background/UareLs.txt', 'utf-8');
-		//const words = readFileSync('../background/UareLs', 'utf-8');
-		//const words = "mmm mmaybe";
-		return words;
+		const result = readFileSync(join(__dirname, '../background/UareLs.txt'), 'utf-8');
+		return result;
 
 	}
 }

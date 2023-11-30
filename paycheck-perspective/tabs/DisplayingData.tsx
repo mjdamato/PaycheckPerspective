@@ -10,14 +10,14 @@ export default function DeltaFlyerPage() {
       style={{
         display: "flex",
         flexDirection: "column",
-        padding: 16
+        padding: 16,
+        backgroundColor: 'black',
+        color: '#03fcec'
       }}>
       <h2>Paycheck Perspective</h2>
 
       <p>Welcome to Your application page</p>
-      <p id="rah"></p>
-      <p id="meh">ahhh pleasese dont change me </p>
-      <button onClick={seePostings}>See postings </button>
+      <button onClick={seePostings}>See saved postings </button>
       <p id="countRah"> </p>
     </div>
   )
