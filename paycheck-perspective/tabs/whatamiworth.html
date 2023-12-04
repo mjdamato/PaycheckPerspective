@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Paycheck Perspective</title>
+		
 		<style type="text/css">
 		
 		body {
@@ -93,14 +94,24 @@
 		<main>
 			<div class="innertube">
 				
-				<h1> Enter your job title to find determine the average expected salary </h1>
-
-                
-                
-                
-                
+				<h1> Want to know what you're worth? </h1>
+				<h2> Find your job title in the list below to determine the median expected salary! </h2>
+				<br>
+                <label for="jobSelector" style="font-size: medium;">Choose the job title that best fits: </label> 
+    			<select name="job-titles" id="jobSelector"></select>
+				<br>
+				<br>
+       			<div id="selectedSalary" style="background-color:lightgrey; padding: 25px; font-size:large; font-weight: 1000;" ></div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div>Median salaries calculated by U.S. Department of Labor in 2022.</div>
 				
 			</div>
+
 		</main>
 
 		<nav id="nav">
@@ -120,5 +131,6 @@
 				</ul>
 			</div>
 		</nav>	
+		<script src="salaryInfo.js"></script>
 	</body>
 </html>
