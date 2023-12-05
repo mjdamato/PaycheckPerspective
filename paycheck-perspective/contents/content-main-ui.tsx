@@ -24,7 +24,11 @@ export default function PlasmoMainUI() {
       }}>
       
 
-      <h4 text-align="center">{`${window.mainMessage}`}</h4>
+      <h4>{`${window.mainMessage}`}</h4>
+      
+      <button type="button" id="storageButton" onClick={doingStuff.setStorage}>
+      Choose your storage 
+      </button>
       
       <button type="button" id="URLbutton" onClick={doingStuff.saveLink}>
          {window.saveM}
@@ -44,7 +48,6 @@ export default function PlasmoMainUI() {
   )
 }
 let doingStuff = new savingAndGetting();
-
 
 function getURL(){
 	const newURL= window.value;

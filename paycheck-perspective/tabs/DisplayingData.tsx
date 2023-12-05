@@ -18,13 +18,31 @@ export default function DeltaFlyerPage() {
 
       <p>Welcome to Your application page</p>
       <button onClick={seePostings}>See saved postings </button>
-      <p id="countRah"> </p>
+      <div id="countRah"> </div>
+      <button onClick={pickFile}>Choose your storage File</button>
+
     </div>
   )
 }
 let doingStuff = new savingAndGetting();
 let doingJobStuff = new jobsStored();
 function seePostings(){
-  document.getElementById("countRah").innerHTML = doingJobStuff.getDaTextFileJobs();
+	const jobLinks: string[] = doingJobStuff.getDaTextFileJobs();
+	let rah = '';
+	jobLinks.forEach((line) => {
+    rah = rah + '<br>' + '<a href=' + line +' target="_blank">' + line + '</a>';
+  });
+  	document.getElementById("countRah").innerHTML = rah;
+}
 
+
+async function pickFile(){
+	const [fileHandle] = await showOpenFilePicker();
+	const file = await fileHandle.getFile()
+	
+	const writable = await fileHandle.createWritable();
+	await writable.write(fileHandle.name);
+	await writable.close();
+	//alert(file);
+	await alert("yippee");
 }

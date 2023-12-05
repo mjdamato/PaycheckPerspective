@@ -2,9 +2,10 @@ import React from "react";
 //import * as fs from 'fs';
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import {writeFileSync} from 'fs';
-import {appendFileSync} from 'fs';
-import { promises } from "fs";
+//import {storage} from './fileStorage';
+//import {writeFileSync} from 'fs';
+//import {appendFileSync} from 'fs';
+//import { promises } from "fs";
 
 
 
@@ -20,26 +21,25 @@ export default class JobsRah {
    }
 */  
    
-	addToJobs(job: string){
-		this.jobLinks.push(job);
-	}
 	
 	
-	//next function will eventually replace the function above
-	/*
-	addToJobs(job: string){
-		writeFileSync(join(__dirname, '../background/UareLs.txt'), job, {
-    flag: 'w',
-  });
-
-  const contents = readFileSync(join(__dirname, '../background/UareLs.txt'), 'utf-8');
-  //console.log(contents); // 👉️ "One Two Three Four"
-  alert(contents + "rah?");
-
-  //return contents;
-}
-	//}
-	*/
+	async addToJobs(job: string){
+		//if ([fileHandle] == null)
+		const [fileHandle] = await showOpenFilePicker();
+		const file = await fileHandle.getFile()
+		//alert(fileHandle);
+		//const [fileHandle] = doingStorageStuff.choseBasicLocalStorage(fileHandle)
+		const writable = await fileHandle.createWritable();
+		
+		//next line contains an array of job strings
+		let previousStuff = await file.text();
+		previousStuff = (previousStuff + '\n' + job);
+		//this.jobLinks.push(job);
+		await writable.write(previousStuff);
+		await writable.close();
+	//alert(file);
+		//await alert("yippee");
+	} 
 	
 	removeFromJobs(job: string){
 		//the splice is supposed to remove a specified index
@@ -61,7 +61,10 @@ export default class JobsRah {
 	
 	getDaTextFileJobs(){
 		const result = readFileSync(join(__dirname, '../background/UareLs.txt'), 'utf-8');
-		return result;
+		  const resultInArr = result.split(/\r?\n/);
+
+		return resultInArr;
 
 	}
 }
+//let doingStorageStuff = new storage();
