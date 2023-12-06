@@ -2,7 +2,8 @@ import React from "react";
 //import * as fs from 'fs';
 import { readFileSync } from 'fs';
 import { join } from 'path';
-//import {storage} from './fileStorage';
+
+import store from "./fileStorage";
 //import {writeFileSync} from 'fs';
 //import {appendFileSync} from 'fs';
 //import { promises } from "fs";
@@ -25,7 +26,10 @@ export default class JobsRah {
 	
 	async addToJobs(job: string){
 		//if ([fileHandle] == null)
-		const [fileHandle] = await showOpenFilePicker();
+		//const [fileHandle] = await showOpenFilePicker();
+		
+		//calling the checkForStorage function from fileStorage
+		const [fileHandle] = await doingStorageStuff.checkForStorage();
 		const file = await fileHandle.getFile()
 		//alert(fileHandle);
 		//const [fileHandle] = doingStorageStuff.choseBasicLocalStorage(fileHandle)
@@ -67,4 +71,4 @@ export default class JobsRah {
 
 	}
 }
-//let doingStorageStuff = new storage();
+let doingStorageStuff = new store();

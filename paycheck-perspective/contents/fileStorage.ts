@@ -1,31 +1,25 @@
 //import { get, set } from 'https://unpkg.com/idb-keyval@5.0.2/dist/esm/index.js';
-/*
+export default class savedStore {
+	//jobLinks: any[] = [];
+	handleFile:any;
 
-export default class fileStorage {
-	
-	async choseBasicLocalStorage(){
-		
+	async checkForStorage(){
+		//if storage contains things, then return previous value
+		//else return new value
+		if (this.handleFile != null){
+			const [fileHandle] = this.handleFile;
+			return [fileHandle];
+		}
+		else{
+			const [fileHandle] = await showOpenFilePicker();
+			this.handleFile = [fileHandle];
+			return [fileHandle];
+		}
 	}
 
-	async chooseLocalStorage(){
-		try {
-		const pre1 = document.querySelector('pre.file');
-		const pre2 = document.querySelector('pre.directory');
-		const fileHandleOrUndefined = await get('file');
-    	if (fileHandleOrUndefined) {
-     		 pre1.textContent = `Retrieved file handle "${fileHandleOrUndefined.name}" from IndexedDB.`;
-      	return;
-    	}
-    	const [fileHandle] = await showOpenFilePicker();
-    	await set('file', fileHandle);
-    	pre1.textContent = `Stored file handle for "${fileHandle.name}" in IndexedDB.`;
-  	} catch (error) {
-    	alert(error.message);
-  }
-  }
-	
-	
-	
+//for future iterations
+// the following function would be in charge of checking permissions
+/*	
 	async verifyPermission(fileHandle, readWrite) {
   		const options = {};
   		if (readWrite) {
