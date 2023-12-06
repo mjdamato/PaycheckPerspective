@@ -2,7 +2,7 @@
   "name": "paycheck-perspective",
   "displayName": "Paycheck perspective",
   "version": "1.0.1",
-  "description": "Extension to show average pay of a position within a job posting",
+  "description": "General job management extension, allows saving and storing job postings while proving general job seeking advice",
   "author": "Mia Damato, Taylor Cassidy, Gabriel QC",
   "scripts": {
     "dev": "plasmo dev",

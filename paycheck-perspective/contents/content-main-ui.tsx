@@ -26,15 +26,11 @@ export default function PlasmoMainUI() {
 
       <h4>{`${window.mainMessage}`}</h4>
       
-      <button type="button" id="storageButton" onClick={doingStuff.setStorage}>
-      Choose your storage 
-      </button>
-      
-      <button type="button" id="URLbutton" onClick={doingStuff.saveLink}>
+      <button type="button" id="URLbutton" onClick={savingAndApplying.saveLink}>
          {window.saveM}
        </button>
        <p />
-       <button type="button" id="applyButton" onClick={appliedRah}>
+       <button type="button" id="applyButton" onClick={savingAndApplying.appliedRah}>
          {window.applyM}
        </button>
        <p />
@@ -47,12 +43,4 @@ export default function PlasmoMainUI() {
     
   )
 }
-let doingStuff = new savingAndGetting();
-
-function getURL(){
-	const newURL= window.value;
-	return newURL;
-}
-function appliedRah(){
-	alert('Good luck :), this posting has been saved');
-}
+let savingAndApplying = new savingAndGetting();

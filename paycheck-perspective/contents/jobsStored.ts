@@ -25,24 +25,17 @@ export default class JobsRah {
 	
 	
 	async addToJobs(job: string){
-		//if ([fileHandle] == null)
-		//const [fileHandle] = await showOpenFilePicker();
 		
 		//calling the checkForStorage function from fileStorage
 		const [fileHandle] = await doingStorageStuff.checkForStorage();
 		const file = await fileHandle.getFile()
-		//alert(fileHandle);
-		//const [fileHandle] = doingStorageStuff.choseBasicLocalStorage(fileHandle)
 		const writable = await fileHandle.createWritable();
 		
 		//next line contains an array of job strings
 		let previousStuff = await file.text();
 		previousStuff = (previousStuff + '\n' + job);
-		//this.jobLinks.push(job);
 		await writable.write(previousStuff);
 		await writable.close();
-	//alert(file);
-		//await alert("yippee");
 	} 
 	
 	removeFromJobs(job: string){
@@ -51,24 +44,18 @@ export default class JobsRah {
 		this.jobLinks.splice(this.jobLinks.indexOf(job));
 	}
 	
-	getDaJobs(){
-		//if element is left not initialized then its undefined
-		//currently testing
-		var element:string = "mmm maybe ";
-		this.jobLinks.push("rah");
-		for (let i = 0; i < this.jobLinks.length; i++) {
-  			element += this.jobLinks[i] + "--";
-  // Code to execute with 'element' in each iteration
-}
-		return element;
-	}
-	
 	getDaTextFileJobs(){
 		const result = readFileSync(join(__dirname, '../background/UareLs.txt'), 'utf-8');
 		  const resultInArr = result.split(/\r?\n/);
 
 		return resultInArr;
+	}
+	
+	getDaAppliedJobs(){
+		const result = readFileSync(join(__dirname, '../data/UareLs.txt'), 'utf-8');
+		  const resultInArr = result.split(/\r?\n/);
 
+		return resultInArr;
 	}
 }
 let doingStorageStuff = new store();

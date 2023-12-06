@@ -14,12 +14,14 @@ export default function DeltaFlyerPage() {
         backgroundColor: 'black',
         color: '#03fcec'
       }}>
-      <h2>Paycheck Perspective</h2>
-
+      <h1><a href="landingPage.html"> Paycheck Perspective</a></h1>
       <p>Welcome to Your application page</p>
-      <button onClick={seePostings}>See saved postings </button>
+      <button onClick={seePostings}>Your saved job postings!</button>
       <div id="countRah"> </div>
-      <button onClick={pickFile}>Choose your storage File</button>
+      <br />
+      <button onClick={seeAppliedPostings}>Your ongoing job applications!</button>
+      <div id="appliedRah"> </div>
+
 
     </div>
   )
@@ -35,6 +37,14 @@ function seePostings(){
   	document.getElementById("countRah").innerHTML = rah;
 }
 
+function seeAppliedPostings(){
+	const jobLinks: string[] = doingJobStuff.getDaAppliedJobs();
+	let rah = '';
+	jobLinks.forEach((line) => {
+    rah = rah + '<br>' + '<a href=' + line +' target="_blank">' + line + '</a>';
+  });
+  	document.getElementById("appliedRah").innerHTML = rah;
+}
 
 async function pickFile(){
 	const [fileHandle] = await showOpenFilePicker();
@@ -43,6 +53,4 @@ async function pickFile(){
 	const writable = await fileHandle.createWritable();
 	await writable.write(fileHandle.name);
 	await writable.close();
-	//alert(file);
-	await alert("yippee");
 }

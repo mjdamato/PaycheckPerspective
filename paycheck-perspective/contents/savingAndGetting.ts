@@ -33,6 +33,12 @@ export default class savingAndGetting {
 		//if alert works then that means the function can execute well
 		await alert("The job posting: "+ window.value +" has been saved!");
 }
+	async appliedRah() {
+		window.value = location.href;
+		await doingJobStuff.addToJobs(window.value);
+		alert('Good luck :), this posting has been saved');
+
+	}
 	
 	deleteLink(){
 		const count = -1;

@@ -3,7 +3,6 @@ import React from "react";
 import savingAndGetting from "./savingAndGetting"; 
 
 export const config: PlasmoCSConfig = {
-	//matches: ["<all_urls>"],
   matches: ["https://www.linkedin.com/jobs*"],
 
   world: "MAIN"
@@ -24,13 +23,13 @@ export default function PlasmoMainUI() {
       }}>
       
 
-      <h4 text-align="center">{`${window.mainMessage}`}</h4>
+      <h4>{`${window.mainMessage}`}</h4>
       
-      <button type="button" id="URLbutton" onClick={doingStuff.saveLink}>
+      <button type="button" id="URLbutton" onClick={savingAndApplying.saveLink}>
          {window.saveM}
        </button>
        <p />
-       <button type="button" id="applyButton" onClick={appliedRah}>
+       <button type="button" id="applyButton" onClick={savingAndApplying.appliedRah}>
          {window.applyM}
        </button>
        <p />
@@ -43,13 +42,4 @@ export default function PlasmoMainUI() {
     
   )
 }
-let doingStuff = new savingAndGetting();
-
-
-function getURL(){
-	const newURL= window.value;
-	return newURL;
-}
-function appliedRah(){
-	alert('Good luck :), this posting has been saved');
-}
+let savingAndApplying = new savingAndGetting();
